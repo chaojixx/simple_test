@@ -26,7 +26,7 @@ using namespace raven_2;
 using namespace std;
 
 class functions{
-	private: 
+private: 
 	unsigned long int gtime;
 	ros::Publisher pub_automove;
 	tf::Vector3 last_pos;
