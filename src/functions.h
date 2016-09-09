@@ -26,17 +26,19 @@ using namespace raven_2;
 using namespace std;
 
 class functions{
-	public: 
+	private: 
 	unsigned long int gtime;
-	functions();
 	ros::Publisher pub_automove;
 	tf::Vector3 last_pos;
 	tf::Vector3 current_pos;
 	tf::Vector3 des_pos;
 	tf::Vector3 increment;
 	tf::Transform TF_INCR[2];
+
+public:
+	functions();
 	void init_ros(int, char **);
-	void publish_automove(tf::Vector3 , int) ;
+	void publish_automove(tf::Vector3 inc , int) ;
 	void Callback(raven_2::raven_state);
 
 };
